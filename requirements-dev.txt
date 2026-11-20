@@ -1,0 +1,5 @@
+# Development-only tools (notebooks, tests). Not needed by the deployed app.
+-r requirements.txt
+jupyter==1.1.1
+ipykernel==7.4.0
+pytest==9.2.0

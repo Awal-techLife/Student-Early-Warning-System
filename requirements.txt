@@ -1,0 +1,12 @@
+# Runtime dependencies: what the Streamlit app and training scripts need.
+# Streamlit Community Cloud installs exactly this file, so keep it lean.
+# Versions are pinned so results are reproducible (tested on Python 3.12).
+pandas==3.1.1
+numpy==2.5.5
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+seaborn==0.13.2
+shap==0.54.1
+streamlit==1.67.0
+ucimlrepo==0.0.7
