@@ -25,6 +25,9 @@ from src.features import VERSION_LABELS, all_features, make_preprocessor
 from src.train import CV, MODELS_DIR, REPORTS_DIR, choose_threshold, get_split, metrics, per_fold
 
 SENSITIVE = ["sex", "Dalc", "Walc", "romantic"]
+
+# The app's "Medium / watch" band starts where out-of-fold recall reaches 95%.
+WATCH_RECALL = 0.95
 GROUP_COLS = ["sex", "address", "school"]
 VARIANTS = {
     "All features": [],
@@ -107,6 +110,7 @@ def main() -> None:
 
             if variant == "No sensitive features":
                 joblib.dump({**bundle, "pipeline": pipe, "threshold": thr, "features": feats,
+                             "watch_threshold": choose_threshold(train["at_risk"], oof_tr, WATCH_RECALL),
                              "dropped_features": drop,
                              "cv_metrics": cv,
                              "test_metrics": {f"test_{k}": v for k, v in te.items()}},
