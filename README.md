@@ -2,7 +2,7 @@
 
 **A machine-learning tool that flags secondary-school students at risk of failing early enough for a teacher to step in, and explains *why* each student is flagged.**
 
-🔗 **Live demo:** _link added after deployment_ · 📓 [EDA](notebooks/01_eda.ipynb) · [Modelling](notebooks/02_modelling.ipynb) · [Explainability & fairness](notebooks/03_explainability_fairness.ipynb)
+🔗 **[Live demo](https://student-early-warning-system-il3vtkvaxcawxm8fhk7q96.streamlit.app/)** · 📓 [EDA](notebooks/01_eda.ipynb) · [Modelling](notebooks/02_modelling.ipynb) · [Explainability & fairness](notebooks/03_explainability_fairness.ipynb)
 
 | Check one student | Check a whole class |
 |---|---|
